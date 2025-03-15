@@ -1,0 +1,68 @@
+/* Default */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+/* Header */
+header h1 {
+  font-size: 2.3em;
+  color: #4682b4;
+  font-style: italic;
+}
+
+header h3 {
+  font-size: 110%;
+}
+
+header img {
+  float: left;
+}
+
+header h1,
+header h3 {
+  text-indent: 20px;
+}
+
+/* Section */
+section a,
+section a:visited {
+  color: #800000;
+}
+
+section a:focus,
+section a:hover {
+  color: #4682b4;
+}
+
+/* Aside */
+aside h2 {
+  color: #800000;
+}
+
+aside ul li {
+  line-height: 1.5;
+}
+
+aside a,
+aside a:visited {
+  color: #4682b4;
+}
+
+aside a:focus,
+aside a:hover {
+  color: #800000;
+}
+
+/* Footer */
+footer p {
+  font-size: 0.6em;
+  text-align: center;
+}

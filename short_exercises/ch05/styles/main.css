@@ -1,4 +1,94 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom properties */
+:root {
+  --purple-color: rebeccapurple;
+  --lightblue-color: #f0f8ff;
+  --yellow-color: #FFFFE0;
+}
+
+html {
+  background-color: var(--lightblue-color);
+  font-size: 18px;
+}
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width: 90%; /* set the body width to 90% */
+  margin: 0 auto; /* center the body */
+  border: 10px double var(--purple-color);
+  background-color: var(--yellow-color);
+}
+
+main {
+  padding: 25px;
+
+  & h1 {
+    font-size: 150%;
+    color: var(--purple-color);
+  }
+
+  & h2 {
+    font-size: 125%;
+    clear: left;
+  }
+
+  & h3 {
+    font-size: 115%;
+  }
+}
+
+img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+h1,
+h3,
+p {
+  margin: 10px 0;
+}
+
+h2 {
+  margin: 20px 0 10px 0;
+}
+
+blockquote {
+  margin: 10px 0 0 0;
+}
+
+.citeBlock {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+cite {
+  color: var(--purple-color);
+  font-style: normal;
+  font-weight: bold;
+}
+
+ul {
+  margin-left: 10px;
+}
+
+ul li {
+  margin: 5px;
+}
+
+footer {
+  border-top: 3px solid var(--purple-color);
+  text-align: center;
+}
+
+footer p {
+  font-size: 90%;
+  font-weight: bold;
 }

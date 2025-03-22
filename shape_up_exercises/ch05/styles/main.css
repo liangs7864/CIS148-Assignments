@@ -1,0 +1,132 @@
+/*custom properties*/
+:root {
+  --steelblue-color: #4682b4;
+  --lightsteelblue-color: #b0c4de;
+  --maroon-color: #800000;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 5px solid var(--steelblue-color);
+  box-shadow: 3px 3px 30px black, -3px 3px 30px black, 0px 10px 30px black;
+}
+
+a {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+/* margins and padding for the elements */
+h1,
+h2,
+h3 {
+  margin: 15px 0 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+blockquote {
+  margin: 10px 0 10px 30px;
+}
+
+/* Header */
+header {
+  padding: 10px 0 30px 0;
+  background-image: linear-gradient(
+    to bottom,
+    white 0%,
+    var(--lightsteelblue-color) 100%
+  );
+  border-bottom: 3px solid var(--steelblue-color);
+}
+
+header img {
+  float: left;
+  margin-left: 25px;
+  margin-right: 20px;
+}
+
+header h1 {
+  font-size: 2.3em;
+  color: var(--steelblue-color);
+  font-style: italic;
+}
+
+header h3 {
+  font-size: 120%;
+  margin-top: 0;
+}
+
+/* Section */
+section {
+  margin: 10px 20px 20px 20px;
+}
+
+section a,
+section a:visited {
+  color: var(--maroon-color);
+}
+
+section a:focus,
+section a:hover {
+  color: var(--steelblue-color);
+}
+
+/* Aside */
+aside {
+  border: 3px solid var(--steelblue-color);
+  border-radius: 15px;
+  margin: 10px 20px 30px 20px;
+  padding: 0 0 25px 20px;
+}
+
+aside h2 {
+  color: var(--maroon-color);
+}
+
+aside ul li {
+  line-height: 1.5;
+  margin-left: 15px;
+}
+
+aside a,
+aside a:visited {
+  color: var(--steelblue-color);
+}
+
+aside a:focus,
+aside a:hover {
+  color: var(--maroon-color);
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+  background-color: var(--steelblue-color);
+  color: white;
+}
+
+footer p {
+  font-size: 0.8em;
+  text-align: center;
+}

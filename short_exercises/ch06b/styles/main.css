@@ -15,6 +15,9 @@
 }
 
 /* the default styles for the elements */
+html{
+	font-size: 18px;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -35,11 +38,11 @@ a:focus, a:hover {
 /* the styles for the header */
 header {
 	border-bottom: 3px solid var(--primary-color);
-	background-image: linear-gradient(30deg, 
-		var(--accent-color) 0%, 
-		var(--light-accent) 25%, 
-		var(--light) 50%, 
-		var(--light-accent) 75%, 
+	background-image: linear-gradient(30deg,
+		var(--accent-color) 0%,
+		var(--light-accent) 25%,
+		var(--light) 50%,
+		var(--light-accent) 75%,
 		var(--accent-color) 100%);
 	& h2 {
 		font-size: 175%;
@@ -52,7 +55,7 @@ header {
 	}
 	& img {
 		float: left;
-		margin: 0 30px;
+		margin: 0 40px 0 30px;
 		width: clamp(40px, 15%, 66px);
 	}
 }
@@ -60,10 +63,13 @@ header {
 /* the styles for the main element */
 main {
 	clear: left;
+	display: flex;
 }
 
 /* the styles for the section */
 section {
+	flex-basis: 60%;
+	/* padding-left: 0.2em; */
 	& h1 {
 		padding-top: .5em;
 	}
@@ -88,7 +94,7 @@ article {
 	margin-bottom: .5em;
 	& img {
 		float: right;
-		margin: .25em 0 1em 1em;
+		margin: .25em 0 1.5em 1em;
 		border: 1px solid var(--dark);
 		width: min(100%, 225px);
 	}
@@ -96,6 +102,7 @@ article {
 
 /* the styles for the aside */
 aside {
+	flex-basis: 20%;
 	& h2 {
 		color: var(--primary-color);
 	}
@@ -110,6 +117,6 @@ footer {
 	& p {
 		text-align: center;
 		color: white;
-		padding-bottom: 0; 
+		padding-bottom: 0;
 	}
 }

@@ -15,6 +15,9 @@
 }
 
 /* the default styles for the elements */
+html{
+	font-size: 18px;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
@@ -32,11 +35,11 @@ a:focus, a:hover { font-style: italic; }
 /* the styles for the header */
 header {
 	border-bottom: 3px solid var(--primary-color);
-	background-image: linear-gradient(30deg, 
-		var(--accent-color) 0%, 
-		var(--light-accent) 25%, 
-		var(--light) 50%, 
-		var(--light-accent) 75%, 
+	background-image: linear-gradient(30deg,
+		var(--accent-color) 0%,
+		var(--light-accent) 25%,
+		var(--light) 50%,
+		var(--light-accent) 75%,
 		var(--accent-color) 100%);
 	& h2 {
 		font-size: 175%;
@@ -98,6 +101,36 @@ footer {
 	& p {
 		text-align: center;
 		color: white;
-		padding-bottom: 0; 
+		padding-bottom: 0;
+	}
+}
+
+/* the styles for the vertical menu */
+.navbar {
+	background-color: var(--primary-color);
+
+	& ul {
+		display: flex;
+		flex-direction: column;
+		list-style-type: none;
+	}
+	& a {
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+		color: white;
+		font-weight: bold;
+	}
+	& a:hover,
+		a:focus {
+		color: var(--accent-color);
+	}
+	& .current {
+		background-color: var(--accent-color);
+		color: var(--dark);
+	}
+	& .current:hover,
+		.current:focus {
+		color: var(--dark);
 	}
 }

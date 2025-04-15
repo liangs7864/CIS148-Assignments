@@ -1,186 +1,317 @@
 /* custom property */
 :root {
-	--accent-color: #800000;  /* could also be coded #800 */
-	--gradient-color: #f6bb73;
+  --accent-color: #800000; /* could also be coded #800 */
+  --gradient-color: #f6bb73;
 
-	--light_menu: white;
-	--mid_menu: antiquewhite;
-	--dark_menu: black;
+  --light_menu: white;
+  --mid_menu: antiquewhite;
+  --dark_menu: black;
 }
 
 /* reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* default styles */
 body {
-	font-family: Arial, Helvetica, sans-serif;
-    font-size: calc(15px + .2vw);
-	width: min(80%, 1024px);
-	line-height: 1.5;
-	margin: auto;
-	border: 2px solid var(--accent-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(15px + 0.2vw);
+  width: min(80%, 1024px);
+  line-height: 1.5;
+  margin: auto;
+  border: 2px solid var(--accent-color);
 }
-h1, h2, h3, p, ul {
-	padding: .25em 0;
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0.25em 0;
 }
-a:hover, a:focus{
-	font-style: italic;
-	color: var(--accent-color);
+a:hover,
+a:focus {
+  font-style: italic;
+  color: var(--accent-color);
 }
 h1 {
-	font-size: 150%;
+  font-size: 150%;
 }
 h2 {
-	font-size: 130%;
-	color: var(--accent-color);
+  font-size: 130%;
+  color: var(--accent-color);
 }
 h3 {
-	font-size: 105%;
+  font-size: 105%;
 }
 ul {
-	margin-left: 2em;
+  margin-left: 2em;
 }
 
 /* the styles for the header */
 header {
-	line-height: 1.2;
-	border-bottom: 2px solid var(--accent-color);
-	background-image: linear-gradient(
-	    30deg, var(--gradient-color) 0%, white 30%, white 65%, var(--gradient-color) 100%);
-	& h2 {
-		font-size: 175%;
-		padding: .5em 0 0 0;
-	}
-	& h3 {
-		font-size: 130%;
-		font-style: italic;
-		padding-bottom: 1em;
-	}
-	& img {
-		width: clamp(40px, 15%, 80px);
-		float: left;
-		margin: .75em 1em;
-	}
+	text-align: center;
+  line-height: 1.2;
+  border-bottom: 2px solid var(--accent-color);
+  background-image: linear-gradient(
+    30deg,
+    var(--gradient-color) 0%,
+    white 30%,
+    white 65%,
+    var(--gradient-color) 100%
+  );
+  & h2 {
+    font-size: 175%;
+    padding: 0.5em 0 0 0;
+  }
+  & h3 {
+    font-size: 130%;
+    font-style: italic;
+    padding-bottom: 1em;
+  }
+  & img {
+    display: none;
+  }
 }
 
 /* the styles for the main content */
 main {
-	display: flex;
-	padding: 0 1em 1em;
-	& blockquote {
-		font-style: italic;
-		padding-left: 1em;
-	}
-	& h3 + img { /* speaker images */
-		width: clamp(40px, 50%, 75px);
-		border: 4px double var(--accent-color);
-		border-radius: 10px;
-	}
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0 1em 1em;
+  & blockquote {
+    font-style: italic;
+    padding-left: 1em;
+  }
+  & h3 + img {
+    /* speaker images */
+    width: clamp(40px, 50%, 75px);
+    border: 4px double var(--accent-color);
+    border-radius: 10px;
+  }
 }
 
 /* the styles for the section */
 section {
-	flex-basis: 75%;
-	padding-left: .5em;
-	& img {
-		width: clamp(100px, 50%, 250px);
-		float: right;
-		margin: 0 1em .25em;
-	}
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--accent-color);
+  & img {
+    width: clamp(100px, 50%, 250px);
+    float: right;
+    margin: 0 1em 0.25em;
+  }
 }
 
 /* the styles for the aside */
 aside {
-	flex-basis: 25%;
-	padding-right: .5em;
+  padding-right: 0.5em;
 }
 
 /* the styles for the footer */
 footer {
-	background-color: var(--accent-color);
-	& p {
-		text-align: center;
-		color: white;
-		padding: 1em 0;
-	}
+  background-color: var(--accent-color);
+  & p {
+    text-align: center;
+    color: white;
+    padding: 1em 0;
+  }
 }
 
 /* CSS class */
 .featured {
-	border-top: 2px solid var(--accent-color);
-	border-bottom: 2px solid var(--accent-color);
-	padding: .5em 0 1em;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding: 0.5em 0 1em;
 }
 .speaker {
-	& h1 {
-		color: var(--accent-color);
-	}
-	& h2 {
-		color: black;
-	}
-	& p {
-		padding: .5em 0; 
-	}	
+  & h1 {
+    color: var(--accent-color);
+  }
+  & h2 {
+    color: black;
+  }
+  & p {
+    padding: 0.5em 0;
+  }
 }
 .large {
-	font-size: 125%;
+  font-size: 125%;
 }
 
 /* styles for the menu */
 .menu {
-	display: flex;
-	flex-wrap: wrap;
-	& li { 
-		flex-basis: 20%; 
-		text-align: center;
-	}
+  position: absolute;
+  left: 0;
+  background-color: var(--accent-color);
+  width: 40%;
+  display: none;
 }
-
+/* format menu button */
+.menu-btn {
+  display: block;
+  padding: 0.7em;
+  color: white;
+  font-size: 1.5em;
+}
+/* hamburger symbol */
+.menu-btn::after {
+  content: "\2630";
+}
+/* checkbox is always hidden */
+#checkbox-toggle {
+  display: none;
+}
+/* when checkbox is checked, display the menu and the close symbol */
+#checkbox-toggle:checked ~ .menu {
+  display: block;
+}
+#checkbox-toggle:checked ~ .menu-btn::after {
+  content: "\2716";
+}
 .navbar {
-	clear: left;
-	background-color: var(--accent-color);
-	& a {
-		display: block;
-		padding: 1em;
-		text-decoration: none;
-		margin: 0 1px 2px;
-	}
-	& a:link, a:visited { 
-		color: var(--light_menu);
-	}
-	& a:hover, a:focus, a.current {
-		background-color: var(--mid_menu);
-		color: var(--dark_menu);
-	}
-	& ul {
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-	}
+  clear: left;
+  background-color: var(--accent-color);
+  position: relative;
+  & a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    margin: 0 2px 2px 0;/* let the LEFT menu borders thicker */
+  }
+  & a:link,
+  a:visited {
+    color: var(--light_menu);
+  }
+  & a:hover,
+  a:focus,
+  a.current {
+    background-color: var(--mid_menu);
+    color: var(--dark_menu);
+  }
+  & ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
+/* Submenu */
+.menu li:has(.submenu) {
+  position: relative;
+
+  & small::after {
+    content: "\25b6"; /* right triangle */
+  }
+  & small {
+    margin-left: 0.5em; /* add space */
+  }
+  &:hover > .submenu {
+    display: block;
+  }
+}
 .submenu {
-	position: relative;
-	& small { margin-left: .25em; }
+  position: absolute;/* relative to the menu item that contains it */
+	top: 0; /* sets the element’s top edge to align with the top edge of that ancestor.*/
+  left: 100%; /* Position the left edge of the element at 100% of the width of its positioned ancestor. */
+  background-color: var(--accent-color);
+  color: var(--light-menu-color);
+	width: 100%; /* 100% sets the element’s width to match the width of its containing block */
+  display: none;
+  & > li a {
+    margin: 2px; /* add 4 borders around <a> */
+  }
 }
 
-.dropdown {
-	position: absolute;
-	left: 0;
-	right: 0;
-	background-color: var(--accent-color);
-	color: var(--light_menu);
-	display: none;
-	& > li a { margin: 0 2px 2px; }
+/* media query for the column layout in larger screen*/
+@media only screen and (width >= 902px) {
+  /* the styles for the main content */
+  main {
+    flex-direction: row;
+  }
+
+  /* the styles for the section */
+  section {
+    flex-basis: 75%;
+  }
+
+  /* the styles for the aside */
+  aside {
+    flex-basis: 25%;
+  }
 }
 
-.submenu:hover > .dropdown {
-	display: block;
+/* media query for the navigation menu in larger screen */
+@media only screen and (width >= 767px) {
+  .menu {
+    position: relative; /* change position */
+    display: flex; /* show horizontal menu */
+    width: 100%;
+    justify-content: space-evenly;
+    & li {
+      flex-basis: 20%;
+      text-align: center;
+    }
+  }
+  /* hide menu button */
+  .menu-btn {
+    display: none;
+  }
+  /* make sure menu displays horizontally if menu checkbox is checked */
+  #checkbox-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  /* Submenu */
+  .menu li:has(.submenu) {
+    position: relative;
+
+    & small::after {
+			content: "\25bc"; /* down triangle */
+		}
+		& small {
+			margin-left: 0.5em; /* add space */
+		}
+    &:hover > .submenu {
+      display: block;
+    }
+  }
+  .submenu {
+    left: 0;
+    right: 0;
+		top: auto;
+
+    & > li a {
+      margin: 0 2px 2px; /* no TOP border for <a> */
+    }
+  }
+	.menu > li:first-child a {
+		margin-left: 0; /* remove the LEFT border from all <a> in the FIRST <li> of .menu */
+	}
+	.menu > li:last-child a {
+		margin-right: 0; /* remove the RIGHT border from all <a> in the LAST <li> of .menu */
+	}
+
+	/* navbar */
+	.navbar {
+		& a {
+			margin: 0 1px 2px; /* the LEFT and RIGHT menu borders are added up */
+		}
+	}
+
 }
 
-.menu > li:first-child a { margin-left: 0; }
-.menu > li:last-child a { margin-right: 0; }
+/* media query for the header section in larger screen */
+@media only screen and (width >= 639px){
+	header {
+		text-align: left;
+		& img {
+			display: block;
+			width: clamp(40px, 15%, 80px);
+			float: left;
+			margin: 0.75em 1em;
+		}
+	}
+}

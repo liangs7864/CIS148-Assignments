@@ -100,7 +100,7 @@ header h3 {
   left: 0;
   display: none;
   background-color: var(--steelblue-color);
-  width: 40%;
+  width: 30%;
 }
 /* format menu button */
 .menu-btn {
@@ -230,7 +230,7 @@ footer p {
 }
 
 /* media query for the column layout in larger screen*/
-@media only screen and (min-width: 902px) {
+@media only screen and (min-width: 910px) {
   /* Main */
   main {
     flex-direction: row;
@@ -248,7 +248,7 @@ footer p {
 }
 
 /* media query for the navigation menu in larger screen */
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 895px) {
   /* Navbar */
   .navbar {
     & a {

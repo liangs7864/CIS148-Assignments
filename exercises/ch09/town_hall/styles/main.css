@@ -91,6 +91,15 @@ section {
 		float: right;
 		margin: 0 1em .25em;
 	}
+	& ul {
+		list-style-image: url(../images/star.png);
+		margin: 0;
+		padding-left: 1em;
+	}
+	& li {
+		padding-left: .25em;
+		padding-bottom: .25em;
+	}
 }
 
 /* the styles for the aside */
@@ -122,8 +131,8 @@ footer {
 		color: black;
 	}
 	& p {
-		padding: .5em 0; 
-	}	
+		padding: .5em 0;
+	}
 }
 .large {
 	font-size: 125%;
@@ -148,7 +157,7 @@ footer {
 		text-decoration: none;
 		margin: 0 2px 2px 0;
 	}
-	& a:link, a:visited { 
+	& a:link, a:visited {
 		color: var(--light_menu);
 	}
 	& a:hover, a:focus, a.current {
@@ -162,20 +171,20 @@ footer {
 	}
 }
 
-.menu-btn {                                
+.menu-btn {
     display: block;
     padding: 1em;
-    color: var(--light_menu); 
+    color: var(--light_menu);
 }
-.menu-btn::after { 
+.menu-btn::after {
     content: "\2630";                    /* hamburger symbol */
 }
 
 #checkbox-toggle { display: none; }      /* checkbox is always hidden */
 
 /* when checkbox is checked, show menu and change icon */
-#checkbox-toggle:checked ~ .menu { 
-    display: block; 
+#checkbox-toggle:checked ~ .menu {
+    display: block;
 }
 #checkbox-toggle:checked ~ .menu-btn::after {
     content: "\2716";                    /* close (X) symbol */
@@ -207,12 +216,12 @@ footer {
 	main {
 		flex-direction: row;
 	}
-	
+
 	section {
 		flex-basis: 75%;
 		border-bottom: none;
 	}
-	
+
 	aside {
 		flex-basis: 25%;
 	}
@@ -223,8 +232,8 @@ footer {
 		display: flex;
 		position: relative;
 		width: 100%;
-		& li { 
-			flex-basis: 20%; 
+		& li {
+			flex-basis: 20%;
 			text-align: center;
 		}
 	}
@@ -232,7 +241,7 @@ footer {
 	section {
 		border-bottom: none;
 	}
-	
+
 	.menu-btn { display: none; }
 
 	#checkbox-toggle:checked ~ .menu { display: flex; }
@@ -240,7 +249,7 @@ footer {
 	.menu li:has(.submenu) {
 		& small::after { content: "\25bc"; }  /* down triangle */
 	}
-	
+
 	.submenu {
 		top: auto;
 		left: 0;

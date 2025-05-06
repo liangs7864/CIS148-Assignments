@@ -241,6 +241,7 @@ table {
 
 	/* Alignment */
 	& thead {
+		border-top: 2px solid var(--accent-color);
 		text-align: left;
 	}
 	& thead th:nth-child(4){

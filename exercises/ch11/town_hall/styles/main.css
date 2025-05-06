@@ -208,15 +208,13 @@ footer {
 /* table */
 figure {
   padding: 1em 0;
-
-	/* width: 120px; */
 }
 figcaption {
   display: block;
   font-weight: bold;
   text-align: left;
 	color: var(--accent-color);
-  font-size: 120%;
+  font-size: 130%;
   padding-bottom: 0.25em;
 }
 table {

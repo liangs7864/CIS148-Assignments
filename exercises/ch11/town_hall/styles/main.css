@@ -126,8 +126,8 @@ footer {
 		color: black;
 	}
 	& p {
-		padding: .5em 0; 
-	}	
+		padding: .5em 0;
+	}
 }
 .large {
 	font-size: 125%;
@@ -152,7 +152,7 @@ footer {
 		text-decoration: none;
 		margin: 0 2px 2px 0;
 	}
-	& a:link, a:visited { 
+	& a:link, a:visited {
 		color: var(--light_menu);
 	}
 	& a:hover, a:focus, a.current {
@@ -166,20 +166,20 @@ footer {
 	}
 }
 
-.menu-btn {                                
+.menu-btn {
     display: block;
     padding: 1em;
-    color: var(--light_menu); 
+    color: var(--light_menu);
 }
-.menu-btn::after { 
+.menu-btn::after {
     content: "\2630";                    /* hamburger symbol */
 }
 
 #checkbox-toggle { display: none; }      /* checkbox is always hidden */
 
 /* when checkbox is checked, show menu and change icon */
-#checkbox-toggle:checked ~ .menu { 
-    display: block; 
+#checkbox-toggle:checked ~ .menu {
+    display: block;
 }
 #checkbox-toggle:checked ~ .menu-btn::after {
     content: "\2716";                    /* close (X) symbol */
@@ -205,18 +205,72 @@ footer {
 	& > li a { margin: 2px; }
 }
 
+/* table */
+figure {
+  padding: 1em 0;
+
+	/* width: 120px; */
+}
+figcaption {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+	color: var(--accent-color);
+  font-size: 120%;
+  padding-bottom: 0.25em;
+}
+table {
+	border-collapse: collapse;
+	width: 85%;
+
+	& th, td {
+		border-bottom: 2px solid var(--accent-color);
+		padding: .3em .8em;
+	}
+	& tfoot {
+		font-weight: bold;
+		border-bottom: 2px solid var(--accent-color);
+	}
+
+	/* Target all cells (<td> or <th>) in the nth row
+	Except the first td */
+	& tr:nth-child(1) td:not(:first-child),
+	tr:nth-child(3) td:not(:first-child),
+	tr:nth-child(4) td,
+	tr:nth-child(7) td {
+		border-bottom: none;
+	}
+
+	/* Alignment */
+	& thead {
+		text-align: left;
+	}
+	& thead th:nth-child(4){
+		text-align: center;
+		padding-right: 0.1em;
+	}
+	& tr:nth-child(8) td:nth-child(2),
+	tr:nth-child(7) td:nth-child(2),
+	tfoot {
+		text-align: right;
+	}
+	& td:nth-child(4),
+	.last4thTd {
+		text-align: right;
+	}
+}
 
 /* media queries */
 @media only screen and (min-width: 922px) {
 	main {
 		flex-direction: row;
 	}
-	
+
 	section {
 		flex-basis: 75%;
 		border-bottom: none;
 	}
-	
+
 	aside {
 		flex-basis: 25%;
 	}
@@ -227,12 +281,12 @@ footer {
 		display: flex;
 		position: relative;
 		width: 100%;
-		& li { 
-			flex-basis: 20%; 
+		& li {
+			flex-basis: 20%;
 			text-align: center;
 		}
 	}
-	
+
 	.menu-btn { display: none; }
 
 	#checkbox-toggle:checked ~ .menu { display: flex; }
@@ -240,7 +294,7 @@ footer {
 	.menu li:has(.submenu) {
 		& small::after { content: "\25bc"; }  /* down triangle */
 	}
-	
+
 	.submenu {
 		top: auto;
 		left: 0;

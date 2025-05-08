@@ -1,0 +1,84 @@
+section {
+  width: 100%;
+
+  & figure.caloriesTable {
+    padding: 1em;
+    float: none;
+    max-width: 100%;
+  }
+  & figcaption.caloriesTable {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 0.2em;
+    border-bottom: none;
+    color: var(--maroon-color);
+  }
+  & table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+
+    & th,
+    td {
+      padding: 0.3em 0.8em;
+      vertical-align: top;
+    }
+    & thead th {
+      font-weight: bold;
+      background-color: var(--steelblue-color);
+      color: white;
+      text-align: left;
+    }
+    & tbody tr:nth-child(1) td:nth-child(1),
+    tbody tr:nth-child(4) td:nth-child(1),
+    tbody tr:nth-child(7) td:nth-child(1),
+    tbody tr:nth-child(10) td:nth-child(1),
+    tbody tr:nth-child(14) td:nth-child(1),
+    tbody tr:nth-child(16) td:nth-child(1),
+    tbody tr:nth-child(19) td:nth-child(1) {
+      font-weight: bold;
+    }
+    tbody td:last-child,
+    thead th:last-child {
+      text-align: right;
+    }
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .caloriesTable {
+    & th,
+    td {
+      display: block;
+    }
+
+    & thead {
+      display: none;
+    }
+
+    & tbody tr:nth-child(1) td:nth-child(1),
+    tbody tr:nth-child(4) td:nth-child(1),
+    tbody tr:nth-child(7) td:nth-child(1),
+    tbody tr:nth-child(10) td:nth-child(1),
+    tbody tr:nth-child(14) td:nth-child(1),
+    tbody tr:nth-child(16) td:nth-child(1),
+    tbody tr:nth-child(19) td:nth-child(1) {
+      background-color: var(--steelblue-color);
+      color: white;
+    }
+    & tbody td:last-child {
+      text-align: left;
+    }
+
+    & tbody td:last-child::after {
+      content: "calories";
+      margin-left: 0.3em;
+    }
+
+    & .boldText {
+      font-weight: bold;
+    }
+  }
+}

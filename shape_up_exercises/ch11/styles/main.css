@@ -1,0 +1,357 @@
+/*custom properties*/
+:root {
+  --steelblue-color: #4682b4;
+  --lightsteelblue-color: #b0c4de;
+  --maroon-color: #800000;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* The CSS that imports the font  */
+@font-face {
+	font-family: 'AmericanCaptain';
+	src: url("../fonts/American Captain.ttf");
+}
+
+/* Default */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(90% + 0.3vw);
+  line-height: 1.5;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+/* margins and padding for the elements */
+h1,
+h2,
+h3 {
+  margin: 15px 0 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+blockquote {
+  margin: 10px 0 10px 30px;
+}
+
+/* Header */
+header {
+  padding: 20px 0 10px 0;
+  line-height: 1.2;
+  background-image: linear-gradient(
+    to bottom,
+    white 0%,
+    var(--lightsteelblue-color) 100%
+  );
+  border-bottom: 3px solid var(--steelblue-color);
+}
+
+header img {
+  float: left;
+  margin-left: 25px;
+  margin-right: 20px;
+  width: calc(100px, 100%, 120px);
+}
+
+header h1 {
+  font-family: 'AmericanCaptain';
+  font-size: 2.3em;
+  color: var(--steelblue-color);
+  font-style: italic;
+}
+
+header h3 {
+  font-size: 120%;
+  margin-top: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--steelblue-color);
+
+  & ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  & a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+  }
+}
+.menu {
+  position: absolute;
+  left: 0;
+  display: none;
+  background-color: var(--steelblue-color);
+  width: 40%;
+}
+/* format menu button */
+.menu-btn {
+  display: block;
+  padding: 0.7em;
+  color: white;
+  font-size: 1.8em;
+}
+/* hamburger symbol */
+.menu-btn::after {
+  content: "\2630";
+}
+/* checkbox is always hidden */
+#checkbox-toggle {
+  display: none;
+}
+/* when checkbox is checked, display the menu and the close symbol */
+#checkbox-toggle:checked ~ .menu {
+  display: block;
+}
+#checkbox-toggle:checked ~ .menu-btn::after {
+  content: "\2716";
+}
+
+.currentBorder {
+  border: 3px solid white;
+  border-radius: 15px;
+  margin: 0 0.5em;
+}
+
+/* submenu */
+.menu li:has(.submenu) {
+  position: relative;
+
+  & small::after {
+    content: "\25b6"; /* right triangle */
+  }
+  & small {
+    margin-left: 0.5em; /* add space */
+  }
+
+  &:hover > .submenu {
+    display: block;
+  }
+}
+.submenu {
+  position: absolute;
+  left: 103%;
+  top: 0;
+  width: 100%;
+
+  display: none;
+  background-color: var(--steelblue-color);
+  color: white;
+
+  & a {
+    padding: 0.5em 1em;
+  }
+  & a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+/* END Navbar */
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section */
+section {
+  flex-basis: 75%;
+  margin: 10px 10px 20px 20px;
+
+  & h3 {
+    color: var(--maroon-color);
+    clear: left;
+  }
+  & a,
+  a:visited {
+    color: var(--maroon-color);
+  }
+  & a:focus,
+  a:hover {
+    color: var(--steelblue-color);
+  }
+  & ul {
+    list-style-type: square;
+    margin-left: 1.5em;
+  }
+  & img {
+		width: clamp(100px, 100%, 250px);
+	}
+  & figure {
+    float: left;
+    margin-right: 1em;
+    max-width: 250px;
+  }
+  & figcaption {
+    font-weight: bold;
+    border-bottom: 3px solid var(--steelblue-color);
+    margin-bottom: 1em;
+  }
+}
+
+
+/* Aside */
+aside {
+  flex-basis: 25%;
+  height: 100%;
+  border: 3px solid var(--steelblue-color);
+  border-radius: 15px;
+  margin: 20px 30px 30px 30px;
+  padding: 0 30px 25px 20px;
+
+  & h2 {
+    color: var(--maroon-color);
+  }
+  & ul {
+    list-style-type: none;
+  }
+  & ul li {
+    line-height: 1.5;
+  }
+
+  & a,
+  a:visited {
+    color: var(--steelblue-color);
+  }
+
+  & a:focus,
+  & a:hover {
+    color: var(--maroon-color);
+  }
+}
+
+.icon {
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: 0.8em;
+}
+
+/* Footer */
+footer {
+  padding: 10px;
+  background-color: var(--steelblue-color);
+  color: white;
+}
+
+footer p {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* media query for the column layout in larger screen*/
+@media only screen and (min-width: 910px) {
+  /* Main */
+  main {
+    flex-direction: row;
+  }
+
+  /* Section */
+  section {
+    flex-basis: 70%;
+  }
+
+  /* Aside */
+  aside {
+    flex-basis: 30%;
+  }
+}
+
+/* media query for the navigation menu in larger screen */
+@media only screen and (min-width: 1187px) {
+  /* Navbar */
+  .navbar {
+    & a {
+      padding: 0.8em 1em;
+    }
+    & ul {
+      padding-bottom: 0;
+    }
+  }
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & li {
+      flex-basis: 20%;
+    }
+  }
+  /* hide menu button */
+  .menu-btn {
+    display: none;
+  }
+  /* make sure menu displays horizontally if menu checkbox is checked */
+  #checkbox-toggle:checked ~ .menu {
+    display: flex;
+  }
+  /* Home tab with borders*/
+  .currentHome {
+    text-align: center;
+    & span {
+      border: 3px solid white;
+      border-radius: 10px;
+      padding: 0.3em 1.2em;
+    }
+  }
+  /* Home tab without borders */
+  .home {
+    text-align: center;
+    & span {
+    padding: 0.3em 1.2em;
+    }
+  }
+  .current {
+    & span {
+      border: 3px solid white;
+      border-radius: 10px;
+      padding: 0.3em 1.2em;
+    }
+  }
+  .currentBorder {
+    border: none;
+  }
+
+  /* submenu */
+  .menu li:has(.submenu) {
+    & small::after {
+			content: "\25bc"; /* down triangle */
+		}
+    & small {
+      margin-left: 0.5em;
+    }
+  }
+  .submenu {
+    left: 0;
+    right: 0;
+    top: auto;
+  }
+  /* END Navbar */
+}

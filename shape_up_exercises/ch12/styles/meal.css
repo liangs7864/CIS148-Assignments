@@ -1,0 +1,79 @@
+form,
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+}
+
+fieldset {
+  padding: 0.5em 1em 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+legend {
+  font-weight: bold;
+  font-size: 120%;
+  padding: 0 0.1em;
+  color: var(--maroon-color);
+}
+input,
+select {
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+}
+label {
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+.asterisk {
+  color: red;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.2em;
+}
+input:invalid {
+  border: 2px solid red;
+}
+input:valid {
+  border: 2px solid green;
+}
+.lifestyleContainer {
+  margin-bottom: 0.8em;
+}
+textarea {
+  width: 100%;
+  padding: 0.2em;
+  height: 10em;
+  font-family: inherit;
+  font-size: inherit;
+}
+.button-styled {
+  cursor: pointer;
+  color: white;
+  background-color: var(--accent-color);
+  font-weight: bold;
+  font-size: inherit;
+  width: 8em;
+  padding: 0.5em;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.submit-button {
+  margin-right: 1em;
+  background-color: var(--steelblue-color);
+  &:hover {
+    background-color: #316a99;
+  }
+}
+.reset-button {
+  background-color: var(--maroon-color);
+  &:hover {
+    background-color: #540101;
+  }
+}

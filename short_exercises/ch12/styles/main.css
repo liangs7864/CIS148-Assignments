@@ -1,35 +1,90 @@
 /* variables */
 :root {
-    --light: white;
-    --dark: black;
+  --light: white;
+  --dark: black;
 }
 
 /* reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    width: 90%;
-    margin: auto;
-    padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  width: 90%;
+  margin: auto;
+  padding: 1em;
 }
-h1, h2, h3 {
-    padding-bottom: .5em;
+h1,
+h2,
+h3 {
+  padding-bottom: 0.5em;
 }
-form, input, select, textarea {
-    width:100%;
+form,
+input,
+select,
+textarea {
+  width: 100%;
 }
-input, select, button {
-    font-size: inherit;
-    padding: .25em;
-    margin-bottom: .5em;
-    border-radius: 5px;
+fieldset {
+  padding: 0.5em 1em 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+legend {
+  font-weight: bold;
+  font-size: 120%;
+  padding: 0 0.1em;
+}
+input,
+select {
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 5px;
 }
 label {
-    display: block;
+  display: block;
+  margin-bottom: 0.5em;
+}
+input:invalid {
+  border: 2px solid red;
+}
+input:valid {
+  border: 2px solid green;
+}
+textarea {
+  width: 100%;
+  padding: 0.2em;
+  height: 10em;
+  font-family: inherit;
+  font-size: inherit;
+}
+.button-styled {
+  cursor: pointer;
+  color: white;
+  background-color: var(--accent-color);
+  font-weight: bold;
+  font-size: inherit;
+  width: 8em;
+  padding: 0.5em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+}
+
+.submit-button {
+    background-color: green;
+    &:hover {
+        background-color: rgb(4, 75, 4);
+    }
+}
+.reset-button {
+    background-color: red;
+    &:hover {
+        background-color: rgb(136, 1, 1);
+    }
 }

@@ -1,16 +1,93 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Complete a Form</title>
-	<link rel="stylesheet" href="styles/main.css">
-</head>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
 
-<body>
-<h1>Please complete our survey</h1>
-<form action="confirmation.html" method="post">
-    
-</form>
-</body>
+  <body>
+    <h1>Please complete our survey</h1>
+    <form action="confirmation.html" method="post">
+      <fieldset>
+        <legend>Contact information</legend>
+
+        <label for="email"><u>E</u>mail address:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          accesskey="E"
+          tabindex="1"
+          required
+          autofocus
+        />
+
+        <label for="first_name"><u>F</u>irst Name:</label>
+        <input
+          type="text"
+          name="first_name"
+          id="first_name"
+          accesskey="F"
+          tabindex="2"
+          required
+        />
+
+        <label for="last_name"><u>L</u>ast Name:</label>
+        <input
+          type="text"
+          name="last_name"
+          id="last_name"
+          accesskey="L"
+          tabindex="3"
+          required
+        />
+      </fieldset>
+      <fieldset>
+				<legend>Geographic information</legend>
+        <label for="state"><u>S</u>tate:</label>
+        <input
+          type="text"
+          name="state"
+          id="state"
+          pattern="[A-Za-z]{2}"
+          title="Enter a 2-characters state abbreviation"
+          placeholder="Two characters"
+          accesskey="S"
+          tabindex="4"
+          required
+        />
+
+        <label for="zip"><u>Z</u>ip Code:</label>
+        <input
+          type="text"
+          name="zip"
+          id="zip"
+          pattern="\d{5}"
+          title="Enter a 5-digit zip code"
+          placeholder="Five digits"
+          accesskey="Z"
+          tabindex="5"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Source</legend>
+        <label for="about">How did you hear about us?</label>
+        <select id="about" name="about">
+          <option value="web_search" selected>Web Search</option>
+          <option value="social_media">Social Media</option>
+          <option value="flyer_brochure">Flyer or Brochure</option>
+        </select>
+        <label for="comments">Additional comments:</label
+        ><textarea
+          id="comments"
+          placeholder="Add any additional comments here."
+        ></textarea>
+      </fieldset>
+      <button type="submit" class="button-styled submit-button">Submit</button>
+			<button type="reset" class="button-styled reset-button">Reset</button>
+    </form>
+  </body>
 </html>

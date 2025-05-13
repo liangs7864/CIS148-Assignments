@@ -32,11 +32,11 @@ a:focus, a:hover { font-style: italic; }
 /* the styles for the header */
 header {
 	border-bottom: 3px solid var(--primary-color);
-	background-image: linear-gradient(30deg, 
-		var(--accent-color) 0%, 
-		var(--light-accent) 25%, 
-		var(--light) 50%, 
-		var(--light-accent) 75%, 
+	background-image: linear-gradient(30deg,
+		var(--accent-color) 0%,
+		var(--light-accent) 25%,
+		var(--light) 50%,
+		var(--light-accent) 75%,
 		var(--accent-color) 100%);
 	& h2 {
 		font-size: 175%;
@@ -78,6 +78,11 @@ article {
 		border: 1px solid var(--dark);
 		width: min(100%, 480px);
 	}
+	& video {
+		float: left;
+		width: 70%;
+		margin: 0 1em 1em 0;
+	}
 }
 
 /* the styles for the aside */
@@ -98,6 +103,6 @@ footer {
 	& p {
 		text-align: center;
 		color: white;
-		padding-bottom: 0; 
+		padding-bottom: 0;
 	}
 }

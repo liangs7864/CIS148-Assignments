@@ -1,0 +1,12 @@
+video {
+  width: 100%
+}
+
+.audioContainer {
+  display: flex;
+  flex-direction: column;
+  & audio {
+    margin-bottom: 1.2em;
+    width:100%;
+  }
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Resource Center</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/basic.css" />
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+       <a href="../index.html" title="Go back to Home"><img src="../images/py-logo.png" alt="A python Logo" /></a>
+      <div class="header-titles">
+        <h1>Python Resource Center</h1>
+        <h3>Your hub for Python tutorials, tools, and tips.</h3>
+      </div>
+    </header>
+    <nav class="navbar">
+      <input type="checkbox" id="checkbox-toggle" />
+      <label for="checkbox-toggle" class="menu-btn"></label>
+      <ul class="menu">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li class="current">
+          <a href="#"><span>Basics</span></a>
+        </li>
+        <li><a href="intermediate.html">Intermediate</a></li>
+        <li>
+          <a href="projects_practice.html">Projects & Practice</a>
+        </li>
+        <li>
+          <a href="resources_tools.html">Resources & Tools<small></small></a>
+          <ul class="submenu">
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="hero-img-container">
+        <img class="hero-img" src="../images/py-logo.png" alt="A python logo" />
+      </div>
+      <div class="hero-text">
+        <h1>Python Basics</h1>
+        <p>
+          Python Basics is your essential starting point for mastering one of
+          the most versatile and beginner-friendly programming languages. In
+          this section, you'll learn the fundamental building blocks of Python,
+          including variables, data types, conditionals, loops, and functions.
+        </p>
+      </div>
+    </div>
+    <main>
+      <section>
+        <h1>Introduction to Python</h1>
+        <p>
+          <video
+            src="../media/Python-Introduction.mp4"
+            controls
+            poster="../images/py-intro.png"
+          ></video>
+        </p>
+        <h1>Installing Python and Setting Up an IDE</h1>
+        <div class="card-container">
+          <div class="card-wrapper" id="info1">
+            <a href="#info1" class="card"
+              ><div class="card-img">
+                <i class="fa-brands fa-apple"></i>
+              </div>
+              <div class="card-title">macOS</div></a
+            >
+            <div class="info">
+              <h3>Step-by-Step Guide to Install Python on macOS</h3>
+              <ol>
+                <li>
+                  <strong>Download the Installer</strong>
+                  <p>
+                    Visit the
+                    <a
+                      href="https://www.python.org/downloads/mac-osx/"
+                      target="_blank"
+                      >official Python downloads page
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                    and download the latest version suitable for macOS. The
+                    installer is a .pkg file, which is a standard macOS
+                    installer package.
+                  </p>
+                </li>
+                <li>
+                  <strong>Run the Installer</strong>
+                  <p>
+                    Locate the downloaded .pkg file and double-click it to
+                    launch the installer. Follow the on-screen instructions to
+                    complete the installation.
+                  </p>
+                </li>
+                <li>
+                  <strong>Verify the Installation</strong>
+                  <p>
+                    After installation, open the Terminal application and run:
+                  </p>
+                  <p><em>python3 --version</em></p>
+                  <p>
+                    This command should display the installed Python version,
+                    confirming a successful installation.
+                  </p>
+                </li>
+                <li>
+                  <strong>Access Python's Interactive Shell (IDLE)</strong>
+                  <p>
+                    You can start Python's integrated development environment
+                    (IDLE) by typing idle3 in the Terminal or by locating IDLE
+                    in your Applications folder.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="card-wrapper" id="info2">
+            <a href="#info2" class="card"
+              ><div class="card-img">
+                <i class="fa-brands fa-windows"></i>
+              </div>
+              <div class="card-title">Windows</div></a
+            >
+            <div class="info">
+              <h3>Step-by-Step Guide to Install Python on Windows</h3>
+              <ol>
+                <li>
+                  <strong>Download the Installer</strong>
+                  <p>
+                    Visit the
+                    <a
+                      href="https://www.python.org/downloads/windows/"
+                      target="_blank"
+                      >official Python downloads page
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                    and download the Windows installer (64-bit) from the "Stable
+                    Releases" section.
+                  </p>
+                </li>
+                <li>
+                  <strong>Run the Installer</strong>
+                  <p>
+                    Locate the downloaded .exe file and double-click it to
+                    launch the installer. Follow the on-screen instructions to
+                    complete the installation.
+                  </p>
+                </li>
+                <li>
+                  <strong>Verify the Installation</strong>
+                  <p>After installation, open the Command Prompt and run:</p>
+                  <p><em>python --version</em></p>
+                  <p>
+                    This command should display the installed Python version,
+                    confirming a successful installation.
+                  </p>
+                </li>
+                <li>
+                  <strong>Access Python's Interactive Shell (IDLE)</strong>
+                  <p>
+                    You can start Python's integrated development environment
+                    (IDLE) by typing python in the Command Prompt. This will
+                    launch the interactive shell, and you'll see something like:
+                  </p>
+                  <p>>>></p>
+                  <p>You can now type Python code directly.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <h1>Variables and Types</h1>
+        <p>
+          Python is completely object oriented, and not "statically typed". You
+          do not need to declare variables before using them, or declare their
+          type.
+        </p>
+        <h3>Numbers</h3>
+        <p>
+          Python supports two types of numbers - integers(whole numbers) and
+          floating point numbers(decimals).
+        </p>
+        <div class="codeBox">
+          <div>
+            <h4>script.py</h4>
+            <p>myint = 7</p>
+            <p>print(myint)</p>
+          </div>
+          <div>
+            <h4>Python Shell (Result)</h4>
+            <p>7</p>
+          </div>
+        </div>
+        <div class="codeBox">
+          <div>
+            <h4>script.py</h4>
+            <p># Two notations to define a floating point number</p>
+            <p>myfloat = 7.0</p>
+            <p>print(myfloat)</p>
+            <p>myfloat = float(7)</p>
+            <p>print(myfloat)</p>
+          </div>
+          <div>
+            <h4>Python Shell (Result)</h4>
+            <p>7.0</p>
+            <p>7.0</p>
+          </div>
+        </div>
+
+        <h3>Strings</h3>
+        <p>
+          Strings are defined either with a single quote or a double quotes.
+        </p>
+        <div class="codeBox">
+          <div>
+            <h4>script.py</h4>
+            <p>mystring = 'hello'</p>
+            <p>print(mystring)</p>
+            <p>mystring = "hello"</p>
+            <p>print(mystring)</p>
+          </div>
+          <div>
+            <h4>Python Shell (Result)</h4>
+            <p>hello</p>
+            <p>hello</p>
+          </div>
+        </div>
+        <p>
+          Using double quotes makes it easy to include apostrophes (whereas
+          these would terminate the string if using single quotes)
+        </p>
+        <div class="codeBox">
+          <div>
+            <h4>script.py</h4>
+            <p>mystring = "Don't worry about apostrophes"</p>
+            <p>print(mystring)</p>
+          </div>
+          <div>
+            <h4>Python Shell (Result)</h4>
+            <p>Don't worry about apostrophes</p>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <h2><i class="fa-solid fa-book"></i>Read More</h2>
+        <ul>
+          <li>
+            <a href="https://www.learnpython.org/en/Lists" target="_blank"
+              >Lists
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.learnpython.org/en/Basic_Operators"
+              target="_blank"
+              >Basic Operators
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.learnpython.org/en/String_Formatting"
+              target="_blank"
+              >String Formatting
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.learnpython.org/en/Basic_String_Operations"
+              target="_blank"
+              >Basic String Operations
+            </a>
+          </li>
+          <li>
+            <a href="https://www.learnpython.org/en/Conditions" target="_blank"
+              >Conditions
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2025 Spring, Shuwen Liang</p>
+    </footer>
+  </body>
+</html>

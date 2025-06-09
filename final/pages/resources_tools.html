@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Resource Center</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/tools.css" />
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+       <a href="../index.html" title="Go back to Home"><img src="../images/py-logo.png" alt="A python Logo" /></a>
+      <div class="header-titles">
+        <h1>Python Resource Center</h1>
+        <h3>Your hub for Python tutorials, tools, and tips.</h3>
+      </div>
+    </header>
+    <nav class="navbar">
+      <input type="checkbox" id="checkbox-toggle" />
+      <label for="checkbox-toggle" class="menu-btn"></label>
+      <ul class="menu">
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
+        <li>
+          <a href="basic.html">Basics</a>
+        </li>
+        <li>
+          <a href="intermediate.html">Intermediate</a>
+        </li>
+        <li>
+          <a href="projects_practice.html">Projects & Practice</a>
+        </li>
+        <li class="current">
+          <a href="#"
+            ><span>Resources & Tools<small></small></span
+          ></a>
+          <ul class="submenu">
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="hero-img-container">
+        <img class="hero-img" src="../images/py-logo.png" alt="A python logo" />
+      </div>
+      <div class="hero-text">
+        <h1>Resources & Tools</h1>
+        <p>
+          Whether you’re just starting out or looking to deepen your skills,
+          having the right Python resources and tools can make a big difference
+          in your learning journey. This section provides a curated list of
+          tutorials, documentation, online platforms, and development tools to
+          help you write, test, and optimize Python code more effectively. From
+          official references and interactive learning sites to powerful editors
+          and libraries, these resources are designed to support Python
+          developers at every level.
+        </p>
+      </div>
+    </div>
+    <main>
+      <section>
+        <h1>Tools</h1>
+        <h3>Code Editors & IDEs</h3>
+        <div class="toolRow">
+          <a href="https://code.visualstudio.com/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/vscode logo.png"
+                title="VS Code"
+                alt="vscode logo"
+              /></div
+          ></a>
+          <a href="https://www.jetbrains.com/pycharm/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/PyCharm logo.png"
+                title="PyCharm"
+                alt="PyCharm logo"
+              /></div
+          ></a>
+          <a href="https://jupyter.org/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/Jupyter Notebook logo.png"
+                title="Jupyter Notebook"
+                alt="Jupyter Notebook logo"
+              /></div
+          ></a>
+          <a href="https://thonny.org/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/Thonny logo.png"
+                title="Thonny"
+                alt="Thonny logo"
+              /></div
+          ></a>
+        </div>
+        <h3>Package & Environment Management</h3>
+        <div class="toolRow">
+          <a href="https://pypi.org/project/pip/" target="_blank"
+            ><div class="tinyCard">
+              <img src="../images/pip.png" title="pip" alt="pip logo" /></div
+          ></a>
+          <a href="https://virtualenv.pypa.io/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/virtualenv.png"
+                title="virtualenv"
+                alt="virtualenv logo"
+              /></div
+          ></a>
+          <a href="https://anaconda.org/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/conda.png"
+                title="conda"
+                alt="conda logo"
+              /></div
+          ></a>
+        </div>
+        <h3>Testing & Debugging</h3>
+        <div class="toolRow">
+          <a href="https://pytest.org/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/pytest.png"
+                title="pytest"
+                alt="pytest logo"
+              /></div
+          ></a>
+          <a
+            href="https://docs.python.org/3/library/unittest.html"
+            target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/unittest2.png"
+                title="unittest"
+                alt="unittest logo"
+              /></div
+          ></a>
+          <a href="https://docs.python.org/3/library/pdb.html" target="_blank"
+            ><div class="tinyCard">
+              <img src="../images/pdb.png" title="pdb" alt="pdb logo" /></div
+          ></a>
+        </div>
+        <h3>Web Development</h3>
+        <div class="toolRow">
+          <a href="https://flask.palletsprojects.com/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/Flask.png"
+                title="Flask"
+                alt="Flask logo"
+              /></div
+          ></a>
+          <a href="https://www.djangoproject.com/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/Django.png"
+                title="Django"
+                alt="Django logo"
+              /></div
+          ></a>
+          <a href="https://fastapi.tiangolo.com/" target="_blank"
+            ><div class="tinyCard">
+              <img
+                src="../images/FastAPI.png"
+                title="FastAPI"
+                alt="FastAPI logo"
+              /></div
+          ></a>
+        </div>
+        <div class="back-container">
+          <a href="resources.html" class="backButton"
+            ><div>View Courses & Books</div></a
+          >
+        </div>
+      </section>
+      <aside>
+        <h2><i class="fa-solid fa-book"></i>Learn More</h2>
+        <ul class="custom-ul">
+          <li>
+            <span class="bullet">&#9679;</span>
+            <a
+              href="https://www.youtube.com/watch?v=iSgOe4IBm3Y"
+              target="_blank"
+              >Getting Started with PyCharm!</a
+            >
+          </li>
+          <li>
+            <span class="bullet">&#9679;</span>
+            <a
+              href="https://www.youtube.com/watch?v=suAkMeWJ1yE"
+              target="_blank"
+              >Getting Started with Jupyter Notebooks in VS Code</a
+            >
+          </li>
+          <li>
+            <span class="bullet">&#9679;</span>
+            <a
+              href="https://www.youtube.com/watch?v=oyjOBhwSl-8"
+              target="_blank"
+              >How to Install PIP in Python 3.13 | Step-by-Step Guide (2024)
+            </a>
+          </li>
+          <li>
+            <span class="bullet">&#9679;</span>
+            <a
+              href="https://www.youtube.com/watch?v=0Hhqf8L-b_0"
+              target="_blank"
+              >ANACONDA Tutorial for Python | How to Install Anaconda on Mac OS
+              and How to use Anaconda for Python
+            </a>
+          </li>
+          <li>
+            <span class="bullet">&#9679;</span>
+            <a
+              href="https://www.youtube.com/watch?v=EgpLj86ZHFQ"
+              target="_blank"
+              >Please Learn How To Write Tests in Python • Pytest Tutorial
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2025 Spring, Shuwen Liang</p>
+    </footer>
+  </body>
+</html>
